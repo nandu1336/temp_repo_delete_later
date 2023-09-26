@@ -1,0 +1,59 @@
+    
+    python:
+        dynamically typed language
+        doesn't have to mention the type of the data we are storing in a variable
+
+    iterable: iterable is any object that can looped upon
+    list:
+        - used to store multiple values
+        - can be of different data types
+        - mutable (once created, can be altered)
+        - duplicates are allowed
+        - created using [] or list function
+        ex:
+            a = [1, 2, 1]
+
+        methods:
+            append -> adds item to the end of the list
+            insert -> adds to the given index and moves all other items to the right
+            pop -> by default pops the last item, if index is provided, pops item from given index
+            remove -> accepts value of the item to be removed form the list
+            
+    
+    tuple:
+        - used to store multiple values
+        - can be of different data types
+        - immutable (once created, can not be altered)
+        - duplicates are allowed
+        - created using () or tuple function
+        ex: 
+            t = (1, 2, 1)
+    set: 
+        - used to store multiple values
+        - can be a different data types
+        - mutable
+        - duplicates are not allowed
+        - creted using {} or set function
+        ex: 
+            s = {1, 2, 1} # but stores as {1, 2}
+
+    dictionary:
+        - used to store key, value pairs
+        - key, value pairs are separated by comma (,)
+        - keys should be unique
+        - mutable
+        - created using {} or dict function
+        - dict.keys() -> returns all the keys
+        - dict.vlaues() -> returns all the vlaues
+
+
+git: 
+    1. Creating a repo: 
+        you can either 
+            - create a new repo. and start coding or 
+            - convert an existing project folder into a repo or
+            - clone someone else's repo.
+
+    2. Adding 2nd point
+
+

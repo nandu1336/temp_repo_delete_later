@@ -1,0 +1,10 @@
+cd: 
+    - cd stands for change directory
+    - it is a built in windows command
+    - it can take a folder/dir name as argumnet (input)
+    
+
+dir: 
+    - dir stands for directory
+    - it will list all the contents of current directory
+    - it can take a folder/dir name as arugment(input) 
