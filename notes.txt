@@ -54,6 +54,3 @@ git:
             - convert an existing project folder into a repo or
             - clone someone else's repo.
 
-    2. Adding 2nd point
-
-
