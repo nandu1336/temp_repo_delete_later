@@ -1,8 +1,7 @@
     
     python:
         dynamically typed language
-        doesn't have to mention the type of the data we are storing in a variable
-
+        
     iterable: iterable is any object that can looped upon
     list:
         - used to store multiple values
