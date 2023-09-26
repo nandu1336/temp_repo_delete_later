@@ -1,0 +1,112 @@
+<html>
+    <head>
+       <h1>LOGIN PAGE</h1>
+    </head>
+    <form>
+        <label for="email">Email:</label>
+  <input type="email" id="email" name="fname" onkeyup = "validateEmail()"><br><br>
+  <label for="fname">Password: </label>
+  <input type="text" id="password" name="fname" onkeyup ="validatePassword()"><br><br>
+  <input type="submit" id="mySubmit" disabled> 
+  </form>
+  <script>
+    function validateEmail(){
+      
+      let element = document.getElementById("email")
+      
+      let email=element.value.toLowerCase();
+      if (email.length>=8){
+        
+        
+        if(email.indexOf('@')!=-1){
+
+          let s="~`!#$%^&*()=+-{}[];:"
+          for(let i=0;i<=s.length;i++){
+          
+            let V= s[i];
+            if (email.indexOf(V) !=-1){
+              console.log("invalid");
+              document.getElementById("mySubmit").disabled = true;
+              break;
+              } 
+            }
+
+          let domainNames=[".com",".in",".net",".eu"];
+          for(i=0;i<=domainNames.length;i++){
+              if(email.endsWith(domainNames[i])){
+                console.log("valid");
+                
+                document.getElementById("mySubmit").disabled = false;
+                break;
+              }
+              else{
+                console.log("invalid"); 
+                document.getElementById("mySubmit").disabled = true;            
+              }
+          }
+      
+      }
+      }  
+      }
+      function validatePassword(){
+        let element=document.getElementById("password")
+        let password=element.value;
+        let isValid=false;
+
+        if(password.length>=8){
+          let s="@._~`!#$%^&*()=+-{}[];:"
+          
+          
+          for(let i=0;i<=s.length-1;i++){
+            if(password.indexOf(s[i])!=-1){
+              console.log("contains spl. characters");
+              
+              let n="0123456789"
+              
+              for(let j=0;j<=n.length-1;j++){
+                if(password.indexOf(n[j])!=-1){
+                  console.log("contains a digit");
+                  
+                  for(let k=0;k<=password.length-1;k++){
+                    if(password[k]==password[k].toUpperCase()){
+                      console.log("contains a uppercase");
+
+                      
+                      for(let p=0;p<=password.length-1;p++){
+                        if(password[p]==password[p].toLowerCase()){
+                          console.log("contains a lowercase");
+                          document.getElementById("mySubmit").disabled = false;
+                          return;
+                        }
+                      }
+                      document.getElementById("mySubmit").disabled = true;
+                      return;
+                    }
+                  }
+                  document.getElementById("mySubmit").disabled = true;
+                  return;   
+                }
+                document.getElementById("mySubmit").disabled = true;
+                return;
+              }
+            }
+          console.log("invalid");
+          document.getElementById("mySubmit").disabled = true;
+          return;
+          }
+        }
+      }
+       
+
+       
+
+
+    
+    
+     
+    
+    
+ </script>
+    </body>
+
+</html>
